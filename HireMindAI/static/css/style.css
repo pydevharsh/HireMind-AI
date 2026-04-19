@@ -1,0 +1,343 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI';
+    background: linear-gradient(135deg, #020617, #0f172a);
+    color: white;
+}
+
+/* HEADER */
+.header {
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+}
+
+.logoBox {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.logoBox img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+}
+
+.logoBox span {
+    color: #22c55e;
+}
+
+/* MAIN 2 COLUMN LAYOUT */
+.mainLayout {
+    flex: 1;
+    width: 92%;
+    max-width: 1400px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 20px;
+    padding: 20px 0;
+    min-height: 0;
+}
+
+/* LEFT PANEL */
+.leftPanel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-height: 0;
+}
+
+/* RIGHT PANEL CAMERA */
+.rightPanel {
+    display: flex;
+    flex-direction: column;
+}
+
+/* CARD */
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border-radius: 18px;
+    padding: 18px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.35);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-height: 0;
+}
+
+/* RESUME */
+.resumeCard {
+    height: 180px;
+}
+
+.upload-box {
+    flex: 1;
+    border: 2px dashed rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.upload-box:hover {
+    border-color: #22c55e
+}
+
+/* CAMERA */
+.cameraBox {
+    flex: 1;
+    border-radius: 14px;
+    overflow: hidden;
+    background: black;
+}
+
+.cameraBox video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* CAMERA BUTTONS */
+.cameraBtns {
+    display: flex;
+    gap: 10px;
+}
+
+.cameraBtns button {
+    flex: 1;
+}
+
+/* CHAT */
+.chatCard {
+    flex: 1;
+    min-height: 0;
+}
+
+.chat {
+    flex: 1;
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.45);
+    border-radius: 12px;
+    padding: 16px;
+}
+
+/* INPUT */
+.inputBox {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+}
+
+button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 10px;
+    background: #22c55e;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+button:hover {
+    background: #16a34a
+}
+
+/* FOOTER */
+.footer {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #94a3b8;
+}
+
+/* ================= BUTTON GLASS STYLE ================= */
+
+/* All buttons glass look */
+button {
+    padding: 12px 18px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    color: white;
+    transition: 0.25s ease;
+}
+
+/* Hover glow */
+button:hover {
+    background: rgba(34, 197, 94, 0.25);
+    border-color: #22c55e;
+    box-shadow: 0 0 5px rgba(34, 197, 94, 0.35);
+    transform: translateY(-1px);
+}
+
+/* Click effect */
+button:active {
+    transform: scale(0.96);
+}
+
+/* 🎤 SPEAK BUTTON (round icon style) */
+.inputBox button:first-of-type {
+    width: 46px;
+    padding: 0;
+    font-size: 18px;
+    border-radius: 50%;
+}
+
+/* 🎥 Camera buttons rounded pill */
+.cameraBtns button {
+    border-radius: 40px;
+    font-size: 15px;
+}
+
+/* Send button highlight */
+.inputBox button:last-of-type {
+    background: rgba(34, 197, 94, 0.15);
+    border-color: #22c55e;
+}
+
+/* ================= MESSAGE INPUT GLASS ================= */
+
+/* Input field glass look */
+input {
+    flex: 1;
+    padding: 14px 16px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    outline: none;
+    font-size: 14px;
+    color: white;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    transition: 0.25s ease;
+}
+
+/* placeholder color */
+input::placeholder {
+    color: #cbd5e1;
+}
+
+/* focus glow */
+input:focus {
+    border-color: #22c55e;
+    background: rgba(34, 197, 94, 0.08);
+    box-shadow: 0 0 10px rgba(34, 197, 94, 0.25);
+}
+
+/* Chat container glass upgrade */
+.chat{
+    flex:1;
+    overflow-y:auto;
+    border-radius:16px;
+    padding:18px;
+
+    /* glass dark */
+    background:rgba(15,23,42,0.55);
+    backdrop-filter:blur(14px);
+    border:1px solid rgba(255,255,255,0.08);
+
+    display:flex;
+    flex-direction:column;
+    gap:14px;   /* ⭐ messages spacing */
+}
+
+
+/* Message Box Scrollabar */
+.chat::-webkit-scrollbar{
+    width:6px;
+}
+.chat::-webkit-scrollbar-thumb{
+    background:rgba(255,255,255,0.2);
+    border-radius:10px;
+}
+
+/* Message bubbles glass */
+.msg{
+    max-width:75%;
+    padding:12px 16px;
+    border-radius:14px;
+    line-height:1.5;
+    font-size:14px;
+    word-wrap:break-word;
+
+    backdrop-filter:blur(10px);
+}
+
+/* AI message */
+.bot{
+    background:rgba(30,41,59,0.7);
+    border:1px solid rgba(255,255,255,0.06);
+    align-self:flex-start;
+}
+
+/* User message */
+.user{
+    background:rgba(34,197,94,0.18);
+    border:1px solid rgba(34,197,94,0.35);
+    align-self:flex-end;
+}
+
+/* ===== RESUME BUTTONS ===== */
+
+.resumeCard {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.resumeBtns {
+    display: flex;
+    gap: 12px;
+    margin-top: auto;
+}
+
+/* full width buttons */
+.glassBtn.wide {
+    flex: 1;
+    justify-content: center;
+    padding: 12px 0;
+}
+
+/* upload hover almost removed */
+
+/* file name after upload */
+.fileName {
+    display: none;
+    margin-top: 6px;
+    font-size: 14px;
+    color: #22c55e;
+    word-break: break-all;
+}
